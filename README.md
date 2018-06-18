@@ -1,5 +1,4 @@
-1. 项目需求
------------
+## 项目需求
 
 ### 1.1 基本功能
 
@@ -38,8 +37,7 @@
 
 -   因大多數高級語言已經內置文件系統的訪問功能，請不要使用高級類庫、框架完成課程項目，否則就喪失了大部分鍛煉價值。
 
-2. 設計類圖
------------
+## 設計類圖
 
 ### 2.1 設計類圖
 
@@ -259,25 +257,25 @@ Option選項有多種，後續可能還會添加更多的Option選項，使用�
 1.
 透明性較差，別的Option派生類中並沒有addOption這個方法，使用addOption這個方法時，客戶需要先判斷這個對象是不是Options對象。
 
-### 3. 重構模式
+## 3. 重構模式
 
-#### 3.1 Extract Method
+### 3.1 Extract Method
 
 最初获取文件(目录)文件信息的方法是在OodleApp类中实现的，但由于CalcDirSizeOption,
 LogModeOption, DiffModeOption均需要用到获取文件(目录)文件信息的方法，
 所以将其提取出来作为FileInfoCatcher类来进行使用；
 
-#### 3.2 Replace Nested Conditional with Guard Clauses
+### 3.2 Replace Nested Conditional with Guard Clauses
 
 ![](README_IMG/3ec102a95c20418b453114c32363656f.png)
 
 将嵌套条件语句改成非嵌套的条件语句，是逐层往下的。
 
-#### 3.3 Separate Query for Modifier
+### 3.3 Separate Query for Modifier
 
 将多职责的方法分成多个单职责的方法。
 
-#### 3.4 Replace Conditional with Polymorphism
+### 3.4 Replace Conditional with Polymorphism
 
 使用多态来替换条件分支语句。
 
@@ -287,7 +285,7 @@ LogModeOption, DiffModeOption均需要用到获取文件(目录)文件信息的�
 
 ![](README_IMG/7db8b7c71c00c7fc046b8731a3fa4aa2.png)
 
-### 4 程序运行
+## 4 程序运行
 
 ![](README_IMG/46ee0b23f3297781875ce06227a6b2bf.png)
 

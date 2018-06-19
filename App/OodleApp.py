@@ -2,7 +2,7 @@
 # __Author__: Sdite
 # __Email__ : a122691411@gmail.com
 
-import time
+import time, os, sys
 from FileInfo.FileInfoCatcher import FileInfoCatcher
 from Option.OptionParser import OptionParser
 from Option.OptionFactory import OptionFactory
@@ -19,6 +19,9 @@ class OodleApp(object):
         self.run()
 
     def run(self):
+        if not os.path.exists(self.queryPath) and self.queryPath != '':
+            print('[Error] 不存在路径:', self.queryPath)
+            sys.exit(0)
         if self.queryPath == '-help' or self.queryPath == '':
             HelpOption().execute()
             return
